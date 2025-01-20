@@ -13,9 +13,9 @@ const std::string dummy_bytecode = "\x1B\x7B\x56\x24\xA3\xCC\xB8\xB9\xB9\xC5\x73
 const uintptr_t base = reinterpret_cast<uintptr_t>(GetModuleHandle(NULL));
 
 namespace addresses {
-	const uintptr_t getscheduler = base + 0x738CC0;
-	const uintptr_t task_defer = base + 0x3DFF20; // This could be any function that pops a function from the Luau stack and calls it. Defer is one of them. Also note that task.defer silently logs suspicious calls
-	const uintptr_t luavm_load = base + 0x359BA0;
+	const uintptr_t getscheduler = base + 0x2D7B7A0;
+	const uintptr_t task_defer = base + 0xF0C9A0; // This could be any function that pops a function from the Luau stack and calls it. Defer is one of them. Also note that task.defer silently logs suspicious calls
+	const uintptr_t luavm_load = base + 0xB37E80;
 	const uintptr_t luavm_load_bytecode_hook = base + 0x35CD14;
 	const uintptr_t luavm_load_hashcheck_hook = base + 0x35CCE8;
 }
